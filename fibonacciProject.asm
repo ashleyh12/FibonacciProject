@@ -27,3 +27,8 @@ syscall
 # returning the result
 li $v0, 1
 move $a0, $a1
+
+#exit function
+li $v0, 10
+syscall
+.end main
