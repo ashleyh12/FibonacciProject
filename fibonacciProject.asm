@@ -18,3 +18,12 @@ bge $t0, 25, fib
 jal fibonacci
 # moving the saved value to a1
 move $a1, $v0 
+
+# printing return_fib_number
+li $v0, 4
+la $a0, return_fib_number
+syscall
+
+# returning the result
+li $v0, 1
+move $a0, $a1
