@@ -11,3 +11,10 @@ la $a0, enter_fib_number
 syscall
 # reading the string entered by user
 li $v0, 5
+
+
+move $a0, $v0
+bge $t0, 25, fib
+jal fibonacci
+# moving the saved value to a1
+move $a1, $v0 
