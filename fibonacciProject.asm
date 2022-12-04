@@ -31,4 +31,4 @@ move $a0, $a1
 #exit function
 li $v0, 10
 syscall
-.elp main
+.end main
