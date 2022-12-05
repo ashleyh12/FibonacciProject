@@ -1,6 +1,6 @@
 .data
 
-fib_number: .asciiz "Enter a positive value:\n“
+fib_number: .asciiz "Enter a positive value: \n“
 return_fib_number: .asciiz "Your Fibonacci number is: \n"
 
 .text
