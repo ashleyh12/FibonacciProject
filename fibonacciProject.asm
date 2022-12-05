@@ -39,7 +39,7 @@ sw $s0, 4($sp)
 sw $s1, 8($sp)
 move $s0, $a0
 
-slti $t0, $a0, 2
+ti $t0, $a0, 2
 beq $s0, $0, Return0
 beq $s0, $t1, Return1
 
