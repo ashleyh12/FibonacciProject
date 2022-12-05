@@ -38,13 +38,14 @@ syscall
 
 fib:
 
-  addi $sp, $sp, -12
-  sw $ra, 8($sp)
-  
   beq $a0, $zero, returnZero 
   li $s0, 1
   beq $a0, $s0, returnOne
   
+  addi $sp, $sp, -12
+  sw $ra, 8($sp)
+  
+
   
   sw $s0, 4($sp)
   sw $s1, 0($sp)
