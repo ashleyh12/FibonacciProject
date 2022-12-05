@@ -1,12 +1,12 @@
 .data
 
-fib_number: .asciiz "Enter a positive value: \n“
+enter_fib_number: .asciiz "Enter a positive value: \n“
 return_fib_number: .asciiz "Your Fibonacci number is: \n"
 
 .text
-# printing fib_number
+# printing enter_fib_number
 li $v0, 4
-la $a0, fib_number
+la $a0, enter_fib_number
 syscall
 # reading the string entered by user
 li $v0, 5
