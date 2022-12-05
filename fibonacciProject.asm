@@ -35,17 +35,6 @@ syscall
 li $v0, 10
 syscall
 
-##if n equals zero
-returnZero:
-  move $v0, $zero
-  j exit
-
-##if n equals 1
-returnOne:
-  move $v0, $zero
-  addi $v0, $v0, 1
-  j exit
-
 
 fib:
 
@@ -80,3 +69,16 @@ fibExit:
   addi $sp, $sp, 12
   jr $ra
   ##finished the fib program
+  
+
+##if n equals zero
+returnZero:
+  move $v0, $zero
+  j exit
+
+##if n equals 1
+returnOne:
+  move $v0, $zero
+  addi $v0, $v0, 1
+  j exit
+
