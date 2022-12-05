@@ -41,15 +41,14 @@ sw $s1, 0($sp)
 move $s0, $a0
 
 li $v0, 1
-beq $s0, $0, Return0
-beq $s0, $t1, Return1
+ble $s0, 0x2
 
 addi $a0, $s0, -1
 jal fib
 move $s1, $v0
 addi $a0, $s0, -2
 jal fib
-add $v0, $v0, $s1
+add $v0, $s1, $v0
 fibExit:
 
 lw $ra, 8($sp)
