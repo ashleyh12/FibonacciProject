@@ -64,5 +64,5 @@ fibExit:
 
 equalsZero: ##if the function is equal to zero
 li $v0, 4
-la $a0
-syscall, return_fib_number
+la $a0, return_fib_number
+syscall
