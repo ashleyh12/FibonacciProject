@@ -51,9 +51,12 @@ addi $a0, $s0, -2
 jal fib
 add $v0, $s1, $v0
 fibExit:
-
 #end of program
 lw $ra, 8($sp)
 lw $s0, 4($sp)
+lw $s1, 0($sp)
+addi $sp, $sp, 12
+jr $ra
+#finished the fib program
 
 
