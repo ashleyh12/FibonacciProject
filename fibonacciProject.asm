@@ -32,7 +32,6 @@ li $v0, 10
 syscall
 .end main
 
-#fibonacci function
 fib:
 add $sp, $sp, -12
 sw $ra, 0($sp)
