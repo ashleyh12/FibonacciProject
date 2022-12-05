@@ -2,7 +2,6 @@
 
 enter_fib_number: .asciiz “Insert a positive integer greater than or equal to 25:\n“
 return_fib_number: .asciiz "Your Fibonacci number is:\n"
-error: .asciiz “That is an illegal number\n”
 
 .text
 # printing enter_fib_number
@@ -32,3 +31,11 @@ move $a0, $a1
 li $v0, 10
 syscall
 .end main
+
+#fibonacci function
+fib:
+add $s0, $sp, -12
+sw $a0, 0($sp)
+sw $a0, 4($sp)
+
+
