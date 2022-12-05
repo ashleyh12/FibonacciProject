@@ -17,10 +17,9 @@ beq $v0, 0, equalsZero
 
 
 ##calling fib
-move $t2, $v0
-move $v0, $t2
+move $a0, $v0
 jal fib
-move $a1, $v0
+move $t2, $v0
 
 
 ##printing return_fib_number ( = some #)
@@ -28,9 +27,9 @@ la $a0, return_fib_number
 li $v0, 4
 syscall
 
-##Printing n
-move $a0, $t2
+##returning the result
 li $v0, 1
+move $a0, $a1
 syscall 
 
 ##exit function
