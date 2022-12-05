@@ -51,3 +51,5 @@ addi $a0, $s0, -2
 jal fib
 add $v0, $v0, $s1
 fibExit:
+
+lw $ra, 8($sp)
