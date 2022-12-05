@@ -16,7 +16,6 @@ syscall
 
 # calling fib
 move $a0, $v0
-##bge $t0, 25, fib
 jal fibonacci
 move $a1, $v0
 
