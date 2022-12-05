@@ -36,9 +36,11 @@ fib:
 add $sp, $sp, -12
 sw $ra, 0($sp)
 sw $s0, 4($sp)
+sw $s1, 8($sp)
 move $s0, $a0
 
-beq $s0, $zero, Return0
+slti $t0, $a0, 2
+beq $s0, $0, Return0
 beq $s0, $t1, Return1
 
 
