@@ -30,16 +30,17 @@ move $a0, $a1
 #exit function
 li $v0, 10
 syscall
-.end main
+#.end main
 
 fib:
-add $sp, $sp, -12
-sw $ra, 0($sp)
+
+addi $sp, $sp, -12
+sw $ra, 8($sp)
 sw $s0, 4($sp)
-sw $s1, 8($sp)
+sw $s1, 0($sp)
 move $s0, $a0
 
-ti $t0, $a0, 2
+li $t1, 1
 beq $s0, $0, Return0
 beq $s0, $t1, Return1
 
@@ -48,3 +49,4 @@ jal fib
 move $s1, $v0
 addi $a0, $s0, -2
 jal fib
+addi $v0, $v0, $s1
