@@ -19,7 +19,7 @@ beq $v0, 0, equalsZero
 ##calling fib
 move $a0, $v0
 jal fib
-move $t2, $v0
+move $a1, $v0
 
 
 ##printing return_fib_number ( = some #)
