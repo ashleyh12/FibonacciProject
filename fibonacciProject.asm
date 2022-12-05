@@ -11,7 +11,7 @@ syscall
 # reading the string entered by user
 li $v0, 5
 syscall
-
+beq $v0, 0, equalsZero
 
 
 # calling fib
@@ -54,7 +54,6 @@ fib:
   
   
 fibExit:
-  #end of program
   lw $ra, 8($sp)
   lw $s0, 4($sp)
   lw $s1, 0($sp)
@@ -63,3 +62,7 @@ fibExit:
   #finished the fib program
 
 
+equalsZero: ##if the function is equal to zero
+li $v0, 4
+la $a0
+syscall, return_fib_number
