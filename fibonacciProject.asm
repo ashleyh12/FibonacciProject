@@ -13,7 +13,6 @@ syscall
 ##reading the string entered by user
 li $v0, 5
 syscall
-beq $v0, 0, equalsZero
 
 
 ##calling fib
@@ -36,17 +35,21 @@ syscall
 li $v0, 10
 syscall
 
-##if the function is equal to zero
-equalsZero: 
-  li $v0, 4
-  la $a0, return_fib_number
-  syscall
+##if n equals zero
+returnZero:
+
+##if n equals 1
+returnOne:
 
 
 fib:
 
   addi $sp, $sp, -12
   sw $ra, 8($sp)
+  
+  beq $a0, $zero, returnZero 
+  
+  
   sw $s0, 4($sp)
   sw $s1, 0($sp)
   move $s0, $a0
