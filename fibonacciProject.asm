@@ -43,4 +43,8 @@ slti $t0, $a0, 2
 beq $s0, $0, Return0
 beq $s0, $t1, Return1
 
+addi $a0, $s0, -1
+jal fib
+move $s0, v0
+addi $a0, $s0, -2
 
