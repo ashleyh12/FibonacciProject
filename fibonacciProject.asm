@@ -11,10 +11,11 @@ syscall
 # reading the string entered by user
 li $v0, 5
 
-
+#calling fibonacci
 move $a0, $v0
 bge $t0, 25, fib
 jal fibonacci
+
 # moving the saved value to a1
 move $a1, $v0 
 
@@ -33,14 +34,13 @@ syscall
 
 
 fib:
-
 addi $sp, $sp, -12
 sw $ra, 8($sp)
 sw $s0, 4($sp)
 sw $s1, 0($sp)
 move $s0, $a0
 
-li $t1, 1
+li $v0, 1
 beq $s0, $0, Return0
 beq $s0, $t1, Return1
 
