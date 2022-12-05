@@ -1,7 +1,7 @@
 .data
 
 enter_fib_number: .asciiz "Enter a positive value: "
-return_fib_number: .asciiz "Your Fibonacci number is: \n"
+return_fib_number: .asciiz "Your Fibonacci number is: "
 
 .text
 # printing enter_fib_number
