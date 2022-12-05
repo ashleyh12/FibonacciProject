@@ -61,7 +61,7 @@ fib:
   ble $s0, 0x2, fibExit
   addi $a0, $s0, -1
   jal fib
-  move $, $v0
+  move $s1, $v0
   addi $a0, $s0, -2
   jal fib
   addi $v0, $s1, $v0
