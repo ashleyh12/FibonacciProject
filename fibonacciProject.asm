@@ -57,16 +57,16 @@ fib:
   ble $s0, 0x2, fibExit
   addi $a0, $s0, -1
   jal fib
-  move $s1, $v0
+  move $t0, $v0
   addi $a0, $s0, -2
   jal fib
-  add $v0, $s1, $v0
+  add $v0, $t0, $v0
   
   
 fibExit:
   lw $ra, 8($sp)
   lw $s0, 4($sp)
-  lw $s1, 0($sp)
+  lw $t0, 0($sp)
   addi $sp, $sp, 12
   jr $ra
   ##finished the fib program
