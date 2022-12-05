@@ -76,10 +76,12 @@ fibExit:
 returnZero:
   move $v0, $zero
   j exit
+  nop
 
 ##if n equals 1
 returnOne:
   move $v0, $zero
   addi $v0, $v0, 1
   j exit
+  nop
 
