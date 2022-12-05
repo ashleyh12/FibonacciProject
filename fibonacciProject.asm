@@ -37,9 +37,12 @@ syscall
 
 ##if n equals zero
 returnZero:
+  move $v0, $zero
+  j exit
 
 ##if n equals 1
 returnOne:
+  move $v0, $zero
 
 
 fib:
