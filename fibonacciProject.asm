@@ -36,9 +36,9 @@ syscall
 
 ##if the function is equal to zero
 equalsZero: 
-li $v0, 4
-la $a0, return_fib_number
-syscall
+  li $v0, 4
+  la $a0, return_fib_number
+  syscall
 
 
 fib:
