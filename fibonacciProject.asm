@@ -34,6 +34,10 @@ syscall
 li $v0, 10
 syscall
 
+equalsZero: ##if the function is equal to zero
+li $v0, 4
+la $a0, return_fib_number
+syscall
 
 
 fib:
@@ -44,9 +48,7 @@ fib:
   sw $s1, 0($sp)
   move $s0, $a0
   
-  li $t1, 1
-  beq $s0, $zero, equalsZero
-  beq, $s0, $t1, returnOne
+
   
   li $v0, 1
   ble $s0, 0x2, fibExit
@@ -67,10 +69,4 @@ fibExit:
   #finished the fib program
 
 
-equalsZero: ##if the function is equal to zero
-li $v0, 4
-la $a0, return_fib_number
-syscall
 
-returnOne:
-li $v0, 0
