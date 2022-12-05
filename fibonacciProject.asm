@@ -14,7 +14,7 @@ syscall
 beq $v0, 0, equalsZero
 
 
-## calling fib
+##calling fib
 move $a0, $v0
 jal fibonacci
 move $a1, $v0
