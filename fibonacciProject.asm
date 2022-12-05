@@ -4,11 +4,11 @@ user_input: .asciiz "ENTER A POSITIVE INTEGER\n "
 return_fib_number: .asciiz "YOUR FIBONACCI VALUE IS:\n"
 
 .text
-## entering a fib number
+##entering a fib number
 li $v0, 4
 la $a0, user_input
 syscall
-## reading the string entered by user
+##reading the string entered by user
 li $v0, 5
 syscall
 beq $v0, 0, equalsZero
@@ -20,12 +20,12 @@ jal fibonacci
 move $a1, $v0
 
 
-## printing return_fib_number
+##printing return_fib_number
 li $v0, 4
 la $a0, return_fib_number
 syscall
 
-## returning the result
+##returning the result
 li $v0, 1
 move $a0, $a1
 syscall 
@@ -34,7 +34,8 @@ syscall
 li $v0, 10
 syscall
 
-equalsZero: ##if the function is equal to zero
+##if the function is equal to zero
+equalsZero: 
 li $v0, 4
 la $a0, return_fib_number
 syscall
