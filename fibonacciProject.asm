@@ -34,8 +34,9 @@ syscall
 
 #fibonacci function
 fib:
-add $s0, $sp, -12
-sw $a0, 0($sp)
-sw $a0, 4($sp)
+add $sp, $sp, -12
+sw $ra, 0($sp)
+sw $s0, 4($sp)
+move $s0, $a0
 
 
