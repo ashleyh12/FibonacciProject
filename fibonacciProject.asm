@@ -1,7 +1,7 @@
 .data
 
-user_input: .asciiz "ENTER A POSITIVE INTEGER: \n"
-return_fib_number: .asciiz "YOUR FIBONACCI VALUE IS: "
+user_input: .asciiz "ENTER A POSITIVE INTEGER "
+return_fib_number: .asciiz "YOUR FIBONACCI VALUE IS:\n"
 
 .text
 ## entering a fib number
