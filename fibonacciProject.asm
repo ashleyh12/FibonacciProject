@@ -48,6 +48,8 @@ fib:
   sw $ra, 8($sp)
   
   beq $a0, $zero, returnZero 
+  li $s0, 1
+  beq $a0, $s0, returnOne
   
   
   sw $s0, 4($sp)
