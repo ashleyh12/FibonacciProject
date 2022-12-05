@@ -18,7 +18,7 @@ beq $v0, 0, equalsZero
 
 ##calling fib
 move $a0, $v0
-jal fibonacci
+jal fib
 move $a1, $v0
 
 
