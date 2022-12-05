@@ -43,7 +43,7 @@ returnZero:
 ##if n equals 1
 returnOne:
   move $v0, $zero
-  add $v0, $v0, 1
+  addi $v0, $v0, 1
   j exit
 
 
