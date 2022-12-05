@@ -30,7 +30,7 @@ move $a0, $a1
 #exit function
 li $v0, 10
 syscall
-#.end main
+
 
 fib:
 
@@ -50,3 +50,4 @@ move $s1, $v0
 addi $a0, $s0, -2
 jal fib
 add $v0, $v0, $s1
+fibExit
