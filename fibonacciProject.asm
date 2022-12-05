@@ -45,6 +45,6 @@ beq $s0, $t1, Return1
 
 addi $a0, $s0, -1
 jal fib
-move $s1, v0
+move $s1, $v0
 addi $a0, $s0, -2
 jal fib
