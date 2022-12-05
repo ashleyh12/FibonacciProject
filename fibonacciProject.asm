@@ -3,7 +3,9 @@
 user_input: .asciiz "ENTER A POSITIVE INTEGER\n " 
 return_fib_number: .asciiz "YOUR FIBONACCI VALUE IS:\n"
 
+.globl main
 .text
+main:
 ##entering a fib number
 li $v0, 4
 la $a0, user_input
