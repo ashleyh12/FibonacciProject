@@ -22,8 +22,8 @@ move $a1, $v0
 
 
 ##printing return_fib_number ( = some #)
-la $a0, return_fib_number     
 li $v0, 4
+la $a0, return_fib_number     
 syscall
 
 ##returning the result
