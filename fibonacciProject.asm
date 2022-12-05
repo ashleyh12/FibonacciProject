@@ -38,9 +38,9 @@ syscall
 
 fib:
 
-  beq $a0, $zero, returnZero 
-  li $s0, 1
-  beq $a0, $s0, returnOne
+  ##beq $a0, $zero, returnZero  (evaluates returnZero and returnOne function)
+  ##li $s0, 1
+  ##beq $a0, $s0, returnOne
   
   addi $sp, $sp, -12
   sw $ra, 8($sp)
@@ -73,15 +73,15 @@ fibExit:
   
 
 ##if n equals zero
-returnZero:
-  move $v0, $zero
-  j exit
-  nop
+##returnZero:
+ ## move $v0, $zero
+  ##j exit
+  ##syscall
 
 ##if n equals 1
-returnOne:
-  move $v0, $zero
-  addi $v0, $v0, 1
-  j exit
-  nop
+##returnOne:
+##  move $v0, $zero
+##addi $v0, $v0, 1
+ ## j exit
+ ## nop
 
