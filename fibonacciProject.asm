@@ -64,7 +64,7 @@ fib:
   move $s1, $v0
   addi $a0, $s0, -2
   jal fib
-  addi $v0, $s1, $v0
+  add $v0, $s1, $v0
   
   
 fibExit:
