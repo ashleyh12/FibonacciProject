@@ -97,5 +97,5 @@ fibExit:
 ##  move $v0, $zero
 ##addi $v0, $s0, 1
  ## j exit
- ## nop
+
 
