@@ -52,19 +52,19 @@ fib:
 ##
 
   addi $sp, $sp, -12
-  sw $ra, 8($sp)    ##store the returned address
-  sw $s0, 4($sp)     ##store n
-  sw $s1, 0($sp)     ##store f(n-1)
-  move $s0, $a0     ##using s0 to store a0
+  sw $ra, 8($sp)            ##store the returned address
+  sw $s0, 4($sp)            ##store n
+  sw $s1, 0($sp)            ##store f(n-1)
+  move $s0, $a0             ##using s0 to store a0
   
   li $v0, 1
   ble $s0, 0x2, fibExit     ##checking the function
-  addi $a0, $s0, -1
-  jal fib
-  move $s1, $v0     ##storing f(n-1) to s1
-  addi $a0, $s0, -2
-  jal fib  ##creating arguments for f(n-2)
-  add $v0, $s1, $v0     ##adding f(n-1) to f(n-2)
+  addi $a0, $s0, -1         ##creating arguments for f(N-1)
+  jal fib                   ##call f(n-1)
+  move $s1, $v0             ##storing f(n-1) to s1
+  addi $a0, $s0, -2         ##creating arguments for f(n-2)
+  jal fib                   #calling fib function for f(n-2)
+  add $v0, $s1, $v0         ##adding f(n-1) to f(n-2)
   
   
 fibExit:
