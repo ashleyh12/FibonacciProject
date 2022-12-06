@@ -6,11 +6,11 @@ return_fib_number: .asciiz "YOUR FIBONACCI VALUE IS:\n"
 .globl main
 .text
 main:
-##entering a fib number
+##printing out fib number
 li $v0, 4
 la $a0, user_input
 syscall
-##reading the string entered by user
+##prompt the user to input number n
 li $v0, 5
 syscall
 beq $v0, 0, equalsZero
@@ -52,25 +52,25 @@ fib:
 ##
 
   addi $sp, $sp, -12
-  sw $ra, 8($sp)
-  sw $s0, 4($sp)
-  sw $s1, 0($sp)
-  move $s0, $a0  
+  sw $ra, 8($sp)    ##store the returned address
+  sw $s0, 4($sp)     ##store n
+  sw $s1, 0($sp)     ##store f(n-1)
+  move $s0, $a0     ##using s0 to store a0
   
   li $v0, 1
-  ble $s0, 0x2, fibExit
+  ble $s0, 0x2, fibExit     ##checking the function
   addi $a0, $s0, -1
   jal fib
-  move $s1, $v0
+  move $s1, $v0     ##storing f(n-1) to s1
   addi $a0, $s0, -2
-  jal fib
-  add $v0, $s1, $v0
+  jal fib  ##creating arguments for f(n-2)
+  add $v0, $s1, $v0     ##adding f(n-1) to f(n-2)
   
   
 fibExit:
-  lw $ra, 8($sp)
-  lw $s0, 4($sp)
-  lw $s1, 0($sp)
+  lw $ra, 8($sp)  
+  lw $s0, 4($sp)  
+  lw $s1, 0($sp) 
   addi $sp, $sp, 12
   jr $ra
   ##finished the fib program
