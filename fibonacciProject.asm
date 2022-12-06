@@ -22,6 +22,9 @@ move $a0, $v0
 jal fib
 move $a1, $v0
 
+#checking if n is illegal
+ble $a1, 25, illegal
+
 
 ##printing return_fib_number ( = some #)
 li $v0, 4
