@@ -46,6 +46,13 @@ equalsZero:
   la $a1, return_fib_number
   syscall
 
+##illegal function
+illegal:
+#printing out an error message for the user
+li $v0
+la $a1, error
+syscall
+
 fib:
 
 ##
